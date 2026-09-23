@@ -315,8 +315,8 @@ print("[7] Sup-norm error E_n = ||phi - P_n||_infty  (exact: E_n = 3^-n E_0)")
 Nt = 2 ** 18
 tt = np.arange(Nt + 1) / Nt
 phi_t = koch_param(tt, levels=46)
-E0_num = np.max(np.abs(phi_t - np.real(phi_t)))   # chord [0,1] is real
-print(f"     E_0 = max_t |Im phi(t)| = {E0_num:.6f}   (sqrt(3)/6 = {SQ3/6:.6f})")
+E0_num = np.max(np.abs(phi_t - tt))   # chord P_0(t) = t;  |phi(t)-P_0(t)| = |phi(t)-t|
+print(f"     E_0 = max_t |phi(t) - t| = {E0_num:.6f}   (sqrt(3)/6 = {SQ3/6:.6f})")
 print("      n     E_n          E_n * 3^n      (-> E_0)")
 En_list = []
 for n in range(1, 9):
