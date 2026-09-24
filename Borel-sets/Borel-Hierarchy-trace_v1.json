@@ -1,0 +1,174 @@
+[
+  {
+    "enter": "Σ⁰₁",
+    "payload": {
+      "level": 1,
+      "family": "sigma",
+      "build": "open sets",
+      "examples": [
+        "any open set, e.g. (0, 1)"
+      ]
+    }
+  },
+  {
+    "cross": [
+      "Σ⁰₁",
+      "Δ⁰₂"
+    ],
+    "edge": "edge-sigma-1-delta-2",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "enter": "Δ⁰₂",
+    "payload": {
+      "level": 2,
+      "family": "delta",
+      "build": "the sets that are both Σ⁰₂ and Π⁰₂",
+      "examples": []
+    }
+  },
+  {
+    "cross": [
+      "Δ⁰₂",
+      "Σ⁰₂"
+    ],
+    "edge": "edge-delta-2-sigma-2",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "cross": [
+      "Δ⁰₂",
+      "Π⁰₂"
+    ],
+    "edge": "edge-delta-2-pi-2",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "enter": "Σ⁰₂",
+    "payload": {
+      "level": 2,
+      "family": "sigma",
+      "build": "countable unions of Π⁰₁ sets",
+      "examples": [
+        "ℚ ∩ [0,1]: a countable union of points (singletons are closed)"
+      ],
+      "activity": "show_example",
+      "example": "ℚ ∩ [0,1]"
+    }
+  },
+  {
+    "cross": [
+      "Σ⁰₂",
+      "Δ⁰₃"
+    ],
+    "edge": "edge-sigma-2-delta-3",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "enter": "Π⁰₂",
+    "payload": {
+      "level": 2,
+      "family": "pi",
+      "build": "countable intersections of Σ⁰₁ sets",
+      "examples": [
+        "the irrationals: a countable intersection of dense open sets (a preview of the Baire category theorem)"
+      ]
+    }
+  },
+  {
+    "cross": [
+      "Π⁰₂",
+      "Δ⁰₃"
+    ],
+    "edge": "edge-pi-2-delta-3",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "enter": "Δ⁰₃",
+    "payload": {
+      "level": 3,
+      "family": "delta",
+      "build": "the sets that are both Σ⁰₃ and Π⁰₃",
+      "examples": []
+    }
+  },
+  {
+    "cross": [
+      "Δ⁰₃",
+      "Σ⁰₃"
+    ],
+    "edge": "edge-delta-3-sigma-3",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "cross": [
+      "Δ⁰₃",
+      "Π⁰₃"
+    ],
+    "edge": "edge-delta-3-pi-3",
+    "dashed": false,
+    "payload": {}
+  },
+  {
+    "enter": "Σ⁰₃",
+    "payload": {
+      "level": 3,
+      "family": "sigma",
+      "build": "countable unions of Π⁰₂ sets",
+      "examples": []
+    }
+  },
+  {
+    "cross": [
+      "Σ⁰₃",
+      "Borel sets"
+    ],
+    "edge": "edge-sigma-3-borel",
+    "dashed": true,
+    "payload": {
+      "dashed": "true",
+      "activity": "flag_transfinite"
+    }
+  },
+  {
+    "enter": "Π⁰₃",
+    "payload": {
+      "level": 3,
+      "family": "pi",
+      "build": "countable intersections of Σ⁰₂ sets",
+      "examples": [
+        "the set where a sequence of continuous functions converges: ⋂ₖ ⋃_N ⋂_{n,m≥N} {|fₙ − fₘ| < 1/k} — 'ε shrinks, N is found'; in fact every Π⁰₃ set is the convergence set of some sequence of continuous functions (Hausdorff)"
+      ]
+    }
+  },
+  {
+    "cross": [
+      "Π⁰₃",
+      "Borel sets"
+    ],
+    "edge": "edge-pi-3-borel",
+    "dashed": true,
+    "payload": {
+      "dashed": "true",
+      "activity": "flag_transfinite"
+    }
+  },
+  {
+    "enter": "Borel sets",
+    "payload": {
+      "level": "omega1",
+      "family": "borel",
+      "build": "the union of all levels Σ⁰_α, Π⁰_α for countable α < ω₁",
+      "examples": [
+        "limsup / liminf of sets (Borel–Cantelli)",
+        "every F_σ, G_δ and every level Σ⁰_α, Π⁰_α for α < ω₁"
+      ]
+    }
+  }
+]
